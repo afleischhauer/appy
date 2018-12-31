@@ -25,13 +25,5 @@
   <%= @product.price %>
 </p>
 
-<div class="container">
-  <h2>Order Information</h2>
-  <strong>Order ID: </strong><%= @order.id %>
-  <strong>Product Name: </strong><%= @order.product.name %>
-  <strong>Product Price: </strong><%= number_to_currency(@order.product.price/100.to_f) %>
-  <strong>Total Price: </strong><%= number_to_currency (@order.total/100.to_f) %>
-</div>
-
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

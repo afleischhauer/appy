@@ -8,6 +8,17 @@ h1 {
   text-align: center;
 }
 
-.home, .about, .contact, .products {
+.home, .about, .contact, .products, .sale {
   padding: 1em;
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+.img-fluid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

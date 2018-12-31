@@ -14,14 +14,3 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-
-<div class="row">
-  <% @orders.each do |order| %>
-    <div class="col-sm">
-      <h1>Order # <%= order.id %>: <%= link_to order.product.price, order %>
-      </h1>
-      <p><%= order.product.description %></p>
-      <strong>$ <%= order.product.price %></strong>
-    </div><!-- /col -->
-  <% end %>
-</div>
