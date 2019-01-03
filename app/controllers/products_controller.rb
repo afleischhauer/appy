@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    redirect_to "/simple_pages/landing_page" #delete this
   end
 
   # GET /products/new
