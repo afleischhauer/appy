@@ -25,6 +25,13 @@
         <li role="presentation" class="products"><%= link_to "Products", products_path %></li>
         <li role="presentation" class="sale"><%= link_to "SALE", simple_pages_landing_page_path %><li>
       </ul>
+
+      <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+        <%= form.label :q, 'Search for:' %>
+        <%= form.text_field :q, id: 'q', value: params[:q] %>
+        <%= form.submit 'Search' %>
+      <% end %>
+
     </nav>
 
   <%= yield %>

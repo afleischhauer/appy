@@ -6,12 +6,12 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @orders = Order.all
+    search_term = params[:q]
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    redirect_to "/simple_pages/landing_page" #delete this
   end
 
   # GET /products/new
