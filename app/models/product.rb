@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-end
+
 
 def self.search(search_term)
   if Rails.env.production?
