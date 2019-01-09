@@ -6,6 +6,13 @@ h1 {
   font-family: sans-serif;
   color: lightblue;
   text-align: center;
+  margin: 1em;
+}
+
+h2 {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 1em;
 }
 
 .home, .about, .contact, .products, .sale {
@@ -26,7 +33,7 @@ h1 {
 }
 
 .product_img {
-  width:100px;
-  height:100px;
+  width:200px;
+  height:200px;
   object-fit:scale-down;
 }
