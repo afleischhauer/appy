@@ -15,8 +15,20 @@
   </head>
 
   <body>
+    <% if notice %>
+    <div class="alert alert-primary" role="alert">
+       ALERT!
+       <%= alert %>
+    </div>
+    <% end %>
 
-    <p class="notice"><%= notice %></p>
+    <% if alert %>
+    <div class="alert alert-primary" role="alert">
+       NOTICE!
+       <%= notice %>
+    </div>
+    <% end %>
+
 
     <nav>
       <ul class="nav nav-tabs">
