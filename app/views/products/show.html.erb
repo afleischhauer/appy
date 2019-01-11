@@ -1,29 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<comment class="product-comments">
+  <%= @product.highest_rating_comment %>
+  <%= @product.lowest_rating_comment %>
+</comment>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<img>
+  <%= image_tag(@product.image_url, class: "thumbnail img-fluid") %>
+</img>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+<section class="product-description">
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-<p>
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <p>
+    <strong>Image url:</strong>
+    <%= @product.image_url %>
+  </p>
+
+  <p>
+    <strong>Colour:</strong>
+    <%= @product.colour %>
+  <p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
+
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+
+</section>

@@ -38,6 +38,17 @@ h2 {
   object-fit:scale-down;
 }
 
+// login
+
+.login {
+  margin: auto;
+  width: 100px;
+}
+
+.login-text {
+  text-align: center;
+}
+
 // contact
 
 .form-group {
@@ -49,4 +60,11 @@ h2 {
 .send_button {
   margin: 2em auto;
   display: block;
+}
+
+// footer
+
+footer {
+  text-align: center;
+  margin: 5em;
 }

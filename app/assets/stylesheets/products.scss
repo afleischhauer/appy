@@ -1,3 +1,14 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-description {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.img-fluid {
+  display: block;
+  width: 65%;
+  margin: 2em auto;
+}
