@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<comment class="product-comments">
+<div class="product-comments">
   <%= @product.highest_rating_comment %>
   <%= @product.lowest_rating_comment %>
-</comment>
+</div>
 
 <img>
   <%= image_tag(@product.image_url, class: "thumbnail img-fluid") %>
@@ -21,9 +21,10 @@
     <%= @product.description %>
   </p>
 
-  <p>Average Rating:
+  <div>
+    Average Rating:
        <div class="rated" data-score="<%= @product.average_rating %>"></div>
-     </p>
+  </div>
 
   <p>
     <strong>Image url:</strong>
@@ -45,5 +46,8 @@
 
 </section>
 
-<%= render 'new_comment' %>
-<%= render 'comment' %>
+<div>
+  <%= render 'new_comment' %>
+  <%= render 'comment' %>
+  <%= will_paginate @comments %>
+</div>
