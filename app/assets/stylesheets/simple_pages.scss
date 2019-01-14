@@ -40,13 +40,42 @@ h2 {
 
 // login
 
-.login {
+.nav-item {
   margin: auto;
-  width: 100px;
+  width: 100%;
+  text-align: center;
 }
 
-.login-text {
+.nav-link {
+  margin: auto;
+}
+
+// login/logout button
+
+.login-button {
+  border-style: solid;
+  border-width: thick;
+  border-color: green;
+}
+
+.sign-up-form {
+  width: 50%;
   text-align: center;
+  margin: auto;
+}
+
+// sign-in/sign-out button
+
+.sign-up-button {
+  border-style: solid;
+  border-width: thick;
+  border-color: green;
+}
+
+.login-button {
+  border-style: solid;
+  border-width: thick;
+  border-color: green;
 }
 
 // contact
