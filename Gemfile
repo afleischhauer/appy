@@ -71,3 +71,6 @@ gem 'cancancan', '~> 2.0'
 
 # Paginate Gemfile
 gem 'will_paginate', '~> 3.1.1'
+
+# testing controllers
+gem 'rails-controller-testing'
