@@ -7,11 +7,14 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.where("name LIKE ?", "%#{search_term}%")
-      @orders = Order.all
+
     else
       @products = Product.all
-      @orders = Order.all
+
     end
+
+      @orders = Order.all
+
   end
 
   # GET /products/1

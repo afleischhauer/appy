@@ -11,7 +11,7 @@ describe Product do
 end
 
   it "returns the average rating of all comments" do
-    expect(Product.average_rating).to eq 3
+    expect(product.average_rating).to eq 3
     expect(Product.new(description: "I am a description")).not_to be_valid
   end
 
