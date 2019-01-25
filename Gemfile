@@ -57,7 +57,7 @@ group :development do
 end
 
 group :development, :test do
-  # generating test data via factory bot  
+  # generating test data via factory bot
   gem "factory_bot_rails", "~> 4.0"
 end
 
@@ -79,3 +79,6 @@ gem 'will_paginate', '~> 3.1.1'
 
 # testing controllers
 gem 'rails-controller-testing'
+
+# caching
+gem 'dalli'
