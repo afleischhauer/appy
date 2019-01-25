@@ -9,7 +9,7 @@
     </div>
 
 <img>
-  <%= image_tag(@product.image_url, class: "thumbnail img-fluid") %>
+  <%= image_tag(@product.image_url, class: "thumbnail img-fluid img-zoom", data_zoom_image: "@product.product_image.url") %>
 </img>
 
 <section class="product-description">
