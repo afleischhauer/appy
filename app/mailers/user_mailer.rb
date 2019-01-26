@@ -11,6 +11,7 @@ class UserMailer < ApplicationMailer
   def order_placed(user, product)
      @user = user
      @product = product
+     @message = message
      mail(to: user.email,
        from: "alexander.fleischhauer@gmail.com",
        subject: "Thank you for your money sucka!")

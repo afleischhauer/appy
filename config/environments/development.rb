@@ -14,6 +14,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  #  generate plain JavaScript files instead of CoffeeScript files
+  config.app_generators.javascript_engine = :javascript
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
