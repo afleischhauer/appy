@@ -82,3 +82,6 @@ gem 'rails-controller-testing'
 
 # caching
 gem 'dalli'
+
+# key value store
+gem 'redis-rails'
