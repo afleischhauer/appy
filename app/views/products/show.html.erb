@@ -1,46 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<img>
-  <%= image_tag(@product.image_url, class: "thumbnail img-fluid img-zoom", data_zoom_image: "@product.product_image.url") %>
-</img>
+  <img>
+    <%= image_tag(@product.image_url, class: "thumbnail img-fluid img-zoom", data_zoom_image: "@product.product_image.url") %>
+  </img>
 
-<section class="product-description">
+  <div class="row product-description" data-product-id="<%= @product.id %>">
 
-<% cache @product do %>
+    <% cache @product do %>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
+    <p>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
 
-  <div>
-    Average Rating:
-       <div class="rated" data-score="<%= @product.average_rating %>"></div>
+    <div>
+      Average Rating:
+      <div class="rated" data-score="<%= @product.average_rating %>"></div>
+    </div>
+
+    <p>
+      <strong>Image url:</strong>
+      <%= @product.image_url %>
+    </p>
+
+    <p>
+      <strong>Colour:</strong>
+      <%= @product.colour %>
+    <p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @product.price %>
+    </p>
+
+    <% end %>
+
   </div>
 
-  <p>
-    <strong>Image url:</strong>
-    <%= @product.image_url %>
-  </p>
 
-  <p>
-    <strong>Colour:</strong>
-    <%= @product.colour %>
-  <p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </p>
-
-<% end %>
-
-</section>
 
   <div class="payment">
     <%= form_with(url: '/payments/create') do |form| %>
