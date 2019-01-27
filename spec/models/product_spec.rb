@@ -18,6 +18,16 @@ describe Product do
       expect(Product.new(description: "I am a description")).not_to be_valid
     end
 
+    it "returns the highest rating comment" do
+      expect(product.highest_rating_comment.rating).to eq 5
+      expect(product.highest_rating_comment.body).to eq "Great postcard!"
+    end
+
+    it "returns the lowest rating comment" do
+      expect(product.lowest_rating_comment.rating).to eq 1
+      expect(product.lowest_rating_comment.body).to eq "Awful postcard!"
+    end
+
     it "is not valid without a name" do
       Product.new(description: "Nice bike")
       expect(Product.new(description: "Nice bike")).not_to be_valid
