@@ -45,25 +45,29 @@ describe ProductsController, type: :controller do
     before do
       sign_in@user
     end
+
     it 'creates a new product' do
-      @product = FactoryBot.create(:product)
-      expect(response).to be_successful
-    end
-    it 'cannot create new product' do
-      expect(Product.new).not_to be_valid
+      expect { post :create, params: { product: { name: "Big bike" }}
+        }.to change(Product, :count).by(1)
+
+      expect(Product.last.name).to eq("Big bike")
     end
   end
 
   describe 'PATCH #update' do
     before do
-      sign_in@user
-      @product = FactoryBot.create(:product)
+      sign_in @user
     end
     it 'updates product' do
-      article_params = FactoryBot.attributes_for(:product)
-      expect{ patch :update, params: {id: @product.id, product: article_params }
+      product_params = { name: "new name" }
+
+      expect{ patch :update, params: {id: @product.id, product: product_params}
       }.to change(Product,:count).by(0)
+
+      @product.reload
+
       expect(flash[:notice]).to eq 'Product was successfully updated.'
+      expect(@product.name).to eq("new name")
     end
   end
 
@@ -79,4 +83,4 @@ describe ProductsController, type: :controller do
   end
 
 
-  end
+end
