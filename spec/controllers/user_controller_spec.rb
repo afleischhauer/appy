@@ -28,7 +28,7 @@ describe 'GET #show' do
         end
       end
 
-      context 'when a second user tries to log in on another users page' do
+      context 'when a second user tries to access to on another users page' do
         before do
           sign_in @user2
         end
