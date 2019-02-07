@@ -8,35 +8,35 @@
 
     <% cache @product do %>
 
-    <p>
+    <section>
       <strong>Name:</strong>
       <%= @product.name %>
-    </p>
+    </section>
 
-    <p>
+    <section>
       <strong>Description:</strong>
       <%= @product.description %>
-    </p>
+    </section>
 
-    <div>
+    <section>
       Average Rating:
       <div class="rated" data-score="<%= @product.average_rating %>"></div>
-    </div>
+    </section>
 
-    <p>
+    <section>
       <strong>Image url:</strong>
       <%= @product.image_url %>
-    </p>
+    </section>
 
-    <p>
+    <section>
       <strong>Colour:</strong>
       <%= @product.colour %>
-    <p>
+    </section>
 
-    <p>
+    <section>
       <strong>Price:</strong>
       <%= @product.price %>
-    </p>
+    </section>
 
     <% end %>
 
